@@ -1,12 +1,13 @@
 doctype html 
 html
     head 
+        base(href="/")
         meta(charset="utf-8")
         title Websites4Sale 
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto&display=swap" rel="stylesheet")
-        link(href="css/main" id="mainStylesheet" rel="stylesheet" type="text/css")
+        link(href="../css/main" id="mainStylesheet" rel="stylesheet" type="text/css")
     body 
         nav 
             section(id="banner")
@@ -25,31 +26,30 @@ html
                 li 
                     a(href="../admin/contactlog") Contacts Log
         
-        h2(style="margin-top: 150px;") Schedule a Meet to Start Your Project Now
-        form(action="/contact" method="post")
-            label(for="nname") Name
-            input(placeholder="Enter Your name" name="nname" id="nname" type="text" required)
-            br
-            label(for="eemail") Email
-            input(name="eemail" placeholder="Enter Your Email" id="eemail" type="email" required)
-            br
-            label(for="ddate") Preferred Meeting Date
-            input(name="ddate" id="ddate" type="date" required)
-            br
-            label(for="mmoney") What type of service are you looking for?
-            br
-            select(name="mmoney" id="mmoney" required)
-                option(value="W3 Schools Link") We will send you a link to W3 Schools to make your own website.
-                option(value="No Styling") A basic site with no styling.
-                option(value="Full Access") The complete package. Full access to our suite of services.
-            br
-            label(for="ccheckbox") Check here if you would like the background to be red
-            input(name="ccheckbox" id="ccheckbox" type="checkbox")
-            br
-            label Estimated Total (Pre tax and tip):
-            p(id="estimatedCost")
-            input(type="submit")
+        div#saleCont
+            input(type="text" id="sale-message" placeholder="Enter banner message...")
+            button(onclick="setSale()") Set
+            button(onclick="clearSale()") Delete 
+        h2(style="margin-top: 40px;") Website Requests
+        h3#message
+        table
+            thead
+                tr
+                    th Name
+                    th Email
+                    th Meet Date
+                    th Service Type
+                    th Red?
+                    th Delete Entry
+            tbody 
+                each entry in contactsList
+                    tr
+                        td= entry.name
+                        td= entry.email
+                        td= entry.preferredMeetingDate
+                        td= entry.money
+                        td= entry.red   
         
         script(src="https://kit.fontawesome.com/224f862d86.js" crossorigin="anonymous")
-        script(src="js/main.js" defer)
-        script(src="js/contact.js" defer)
+        script(src="../js/main.js" defer)
+        script(src="../js/table.js" defer)

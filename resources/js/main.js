@@ -21,11 +21,11 @@ function toggleDarkMode() {
 
 function setDarkMode(dark) {
     if(dark=="true") {
-        stylesheet.setAttribute('href', '/main.dark.css');
+        stylesheet.setAttribute('href', '/css/main.dark');
         darkToggle.innerHTML = `<i class="fa-solid fa-moon"></i>`;
     }
     else {
-        stylesheet.setAttribute('href', '/main.css');
+        stylesheet.setAttribute('href', 'css/main');
         darkToggle.innerHTML = `<i class="fa-solid fa-sun"></i>`;
     }
 }

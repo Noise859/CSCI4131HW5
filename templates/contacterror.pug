@@ -7,7 +7,7 @@ html
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto&display=swap" rel="stylesheet")
         link(href="css/main" id="mainStylesheet" rel="stylesheet" type="text/css")
-    body(onload="startConfetti()" style="overflow:hidden")
+    body
         nav 
             section(id="banner")
             ul 
@@ -25,10 +25,8 @@ html
                 li 
                     a(href="../admin/contactlog") Contacts Log
         
-        h1(style="margin-top:150px") File not found 
-        h2 You've reached the end of the road! 
-        div(id="confettiContainer" style="z-index:-1;position:absolute;left:0;top:0;widht:100%;height:100vh")
+        h2(style="margin-top:150px;") Schedule a Meet to Start Your Project Now 
+        h3 There was an issue scheduling your meet. Please try again later.
         
         script(src="https://kit.fontawesome.com/224f862d86.js" crossorigin="anonymous")
         script(src="js/main.js" defer)
-        script(src="js/confetti.js" defer)
