@@ -1,0 +1,75 @@
+doctype html 
+html
+    head 
+        meta(charset="utf-8")
+        title Websites4Sale 
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto&display=swap" rel="stylesheet")
+        link(href="css/main" id="mainStylesheet" rel="stylesheet" type="text/css")
+    body 
+        nav 
+            section(id="banner")
+            ul 
+                li 
+                    h1 Websites4Sale
+                li 
+                    button(onclick="toggleDarkMode()" id="darkToggle")
+                        i(class="fa-solid fa-sun")
+                li
+                    a(href="/main") Home 
+                li 
+                    a(href="/testimonies") Testimonials
+                li 
+                    a(href="/contact") Contact Us
+                li 
+                    a(href="../admin/contactlog") Contacts Log
+        h1(style="margin-top: 150px;") Websites4Sale 
+        h2 Unlocking online success, one site at a time! 
+        img(id="frontImg" src="images/main" alt="Picture of developer typing on a computer")
+        h3 We offer any and all solutions web related! Here are just a few of the servies we provide 
+        ul(id="cards")
+            li(style="border-top-left-radius: 0; border-bottom-left-radius: 0;") Creation
+                ol
+                    li
+                        b Custom Website Design: 
+                        | Craft a unique online identity with a tailor-made website design that reflects your brand's personality and goals.</li>
+                    li 
+                        b Responsive Design: 
+                        | Ensure your website looks flawless and functions seamlessly on all devices, from smartphones and tablets to desktops.</li>
+                    li 
+                        b User-Friendly Navigation: 
+                        | Create an intuitive user experience with easy-to-navigate menus and a clear content hierarchy.</li>
+
+            li Maintenence
+                ol
+                    li 
+                        b Maintenance and Support: 
+                        | Ensure your website runs smoothly with ongoing maintenance and prompt technical support when needed.</li>
+                    li
+                        b Scalability and Future-Proofing: 
+                        | Design your website with scalability in mind to accommodate future growth and evolving technology trends.</li>
+                    li
+                        b Training and Documentation: 
+                        | Provide training and user-friendly documentation to empower your team to manage and update the website efficiently.</li>
+
+            li(style="border-top-right-radius: 0; border-bottom-right-radius: 0;") Management
+                ol
+                    li
+                        b Search Engine Optimization (SEO): 
+                        | Improve your website's visibility on search engines with on-page and off-page SEO techniques to attract organic traffic.</li>
+                    li
+                        b Analytics and Performance Monitoring: 
+                        | Keep track of your website's performance with analytics tools to make data-driven decisions for improvement.</li>
+                    li
+                        b Domain Registration and Hosting Services: 
+                        | Simplify the process of acquiring a domain name and secure, reliable website hosting services.</li>
+        p(id="offer")
+            a(href="/contact") Contact us here to get started.
+            | Welcome to the Websites4Sale family! We 
+            b promise 
+            | you 
+            em won't 
+            | regret it.
+        script(src="https://kit.fontawesome.com/224f862d86.js" crossorigin="anonymous")
+        script(src="js/main.js" defer)

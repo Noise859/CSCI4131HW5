@@ -1,0 +1,55 @@
+doctype html 
+html
+    head 
+        meta(charset="utf-8")
+        title Websites4Sale 
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto&display=swap" rel="stylesheet")
+        link(href="css/main" id="mainStylesheet" rel="stylesheet" type="text/css")
+    body 
+        nav 
+            section(id="banner")
+            ul 
+                li 
+                    h1 Websites4Sale
+                li 
+                    button(onclick="toggleDarkMode()" id="darkToggle")
+                        i(class="fa-solid fa-sun")
+                li
+                    a(href="/main") Home 
+                li 
+                    a(href="/testimonies") Testimonials
+                li 
+                    a(href="/contact") Contact Us
+                li 
+                    a(href="../admin/contactlog") Contacts Log
+        
+        h2(style="margin-top: 150px;") Schedule a Meet to Start Your Project Now
+        form(action="/contact" method="post")
+            label(for="nname") Name
+            input(placeholder="Enter Your name" name="nname" id="nname" type="text" required)
+            br
+            label(for="eemail") Email
+            input(name="eemail" placeholder="Enter Your Email" id="eemail" type="email" required)
+            br
+            label(for="ddate") Preferred Meeting Date
+            input(name="ddate" id="ddate" type="date" required)
+            br
+            label(for="mmoney") What type of service are you looking for?
+            br
+            select(name="mmoney" id="mmoney" required)
+                option(value="W3 Schools Link") We will send you a link to W3 Schools to make your own website.
+                option(value="No Styling") A basic site with no styling.
+                option(value="Full Access") The complete package. Full access to our suite of services.
+            br
+            label(for="ccheckbox") Check here if you would like the background to be red
+            input(name="ccheckbox" id="ccheckbox" type="checkbox")
+            br
+            label Estimated Total (Pre tax and tip):
+            p(id="estimatedCost")
+            input(type="submit")
+        
+        script(src="https://kit.fontawesome.com/224f862d86.js" crossorigin="anonymous")
+        script(src="js/main.js" defer)
+        script(src="js/contact.js" defer)
