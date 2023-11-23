@@ -9,23 +9,7 @@ html
         link(href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto&display=swap" rel="stylesheet")
         link(href="../css/main" id="mainStylesheet" rel="stylesheet" type="text/css")
     body 
-        nav 
-            section(id="banner")
-            ul 
-                li 
-                    h1 Websites4Sale
-                li 
-                    button(onclick="toggleDarkMode()" id="darkToggle")
-                        i(class="fa-solid fa-sun")
-                li
-                    a(href="/main") Home 
-                li 
-                    a(href="/testimonies") Testimonials
-                li 
-                    a(href="/contact") Contact Us
-                li 
-                    a(href="../admin/contactlog") Contacts Log
-        
+        include navbar.pug
         div#saleCont
             input(type="text" id="sale-message" placeholder="Enter banner message...")
             button(onclick="setSale()") Set
@@ -43,12 +27,14 @@ html
                     th Delete Entry
             tbody 
                 each entry in contactsList
-                    tr
+                    tr(id=`contact-${entry.id}`)
                         td= entry.name
                         td= entry.email
                         td= entry.preferredMeetingDate
                         td= entry.money
                         td= entry.red   
+                        td
+                            button(onclick=`removeEntry(${entry.id})`) Delete
         
         script(src="https://kit.fontawesome.com/224f862d86.js" crossorigin="anonymous")
         script(src="../js/main.js" defer)

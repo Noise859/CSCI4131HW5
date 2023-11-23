@@ -8,23 +8,7 @@ html
         link(href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto&display=swap" rel="stylesheet")
         link(href="css/main" id="mainStylesheet" rel="stylesheet" type="text/css")
     body
-        nav 
-            section(id="banner")
-            ul 
-                li 
-                    h1 Websites4Sale
-                li 
-                    button(onclick="toggleDarkMode()" id="darkToggle")
-                        i(class="fa-solid fa-sun")
-                li
-                    a(href="/main") Home 
-                li 
-                    a(href="/testimonies") Testimonials
-                li 
-                    a(href="/contact") Contact Us
-                li 
-                    a(href="../admin/contactlog") Contacts Log
-        
+        include navbar.pug
         h2(style="margin-top:150px;") Schedule a Meet to Start Your Project Now 
         h3 Your meet has been scheduled!
         

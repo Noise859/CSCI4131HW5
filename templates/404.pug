@@ -8,23 +8,7 @@ html
         link(href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto&display=swap" rel="stylesheet")
         link(href="css/main" id="mainStylesheet" rel="stylesheet" type="text/css")
     body(onload="startConfetti()" style="overflow:hidden")
-        nav 
-            section(id="banner")
-            ul 
-                li 
-                    h1 Websites4Sale
-                li 
-                    button(onclick="toggleDarkMode()" id="darkToggle")
-                        i(class="fa-solid fa-sun")
-                li
-                    a(href="/main") Home 
-                li 
-                    a(href="/testimonies") Testimonials
-                li 
-                    a(href="/contact") Contact Us
-                li 
-                    a(href="../admin/contactlog") Contacts Log
-        
+        include navbar.pug
         h1(style="margin-top:150px") File not found 
         h2 You've reached the end of the road! 
         div(id="confettiContainer" style="z-index:-1;position:absolute;left:0;top:0;widht:100%;height:100vh")

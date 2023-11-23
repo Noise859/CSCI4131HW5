@@ -38,13 +38,13 @@ async function setSale(){
         },
         body: JSON.stringify({"message": document.getElementById("sale-message").value})
     });
-    const body = await result.json();
+    const body = await result.text();
     
     if(result.ok) {
-        message.innerHTML = "Banner set to: " + body.message;
+        message.innerHTML = "Banner set to: " + body;
     }
     else {
-        message.innerHTML = "Error setting banner: " + body.message;
+        message.innerHTML = "Error setting banner: " + body;
     }
 }
 
